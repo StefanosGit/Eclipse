@@ -1,0 +1,5 @@
+package br.com.stef.eclipse.optional;
+
+public class Pet {
+
+}

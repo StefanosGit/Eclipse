@@ -1,0 +1,67 @@
+package br.com.stef.eclipse.part2.section1;
+
+import java.util.Locale;
+import java.util.Scanner;
+
+public class ScannerProc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String line = "hello  40 2.5    true";
+		
+		try(Scanner scanner = new Scanner(line)){
+			
+			scanner.useLocale(Locale.US);
+			
+			String word = scanner.next();
+			int num = scanner.nextInt();
+			double a = scanner.nextDouble();
+			boolean b = scanner.nextBoolean();
+
+			
+			System.out.println(word + "\n" + num + "\n" + a + "\n" + b);
+		}
+		
+		String line2 = "Number#45";
+		
+		try(Scanner scanner2 = new Scanner(line2).useDelimiter("#")){
+		
+			String word2 = scanner2.next();
+			int num2 = scanner2.nextInt();
+			
+			System.out.println("\n" + word2 + "\n" + num2);
+			
+		}
+		
+		String line3 = "Teste de contagem de palavras com scanner";
+		
+		try(Scanner scanner3 = new Scanner(line3)){
+			
+			
+			int count = 0;
+			
+			while(scanner3.hasNext()) {
+				
+				String temp = scanner3.next();
+				count++;
+				
+			}
+			
+			System.out.println(count);
+		}
+		
+		
+
+		
+		
+
+		
+		
+		
+		
+
+	}
+
+}

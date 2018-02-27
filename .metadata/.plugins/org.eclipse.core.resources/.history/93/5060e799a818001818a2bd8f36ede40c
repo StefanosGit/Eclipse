@@ -1,0 +1,10 @@
+package br.com.stef.eclipse.part3.section1;
+
+public class ArrayProc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

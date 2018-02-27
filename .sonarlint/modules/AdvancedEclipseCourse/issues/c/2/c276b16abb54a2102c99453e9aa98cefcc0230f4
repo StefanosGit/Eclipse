@@ -1,0 +1,24 @@
+
+bsquid:S1068")Remove this unused "TOKEN" private field.(¾Ÿ¸§ýÿÿÿÿ8ôÏ¤ù›,HÝRMAJORZ
+CODE_SMELL
+†squid:S1192i"JDefine a constant instead of duplicating this literal "ATENTION!" 3 times.(‡¦Öºÿÿÿÿÿ8ÿ§£ú›,H…RCRITICALZ
+CODE_SMELL
+l
+squid:S106F"9Replace this use of System.out or System.err by a logger.(‹“Úà8ôÏ¤ù›,HÞRMAJORZ
+CODE_SMELL
+_squid:S1148{"#Use a logger to log this exception.(€ÉÔ…ýÿÿÿÿ8‡¯Éú›,HˆRMINORZVULNERABILITY
+[squid:S1659Q"'Declare "firstName" on a separate line.(¡¤í 8Ü×Ýù›,HïRMINORZ
+CODE_SMELL
+ksquid:S1153ƒ"1Directly append the argument of String.valueOf().(”‘õñùÿÿÿÿ8¾Ûÿù›,HþRMINORZ
+CODE_SMELL
+\squid:S16594"#Declare "grade" on a separate line.(å€á¯úÿÿÿÿ8ôÏ¤ù›,HÜRMINORZ
+CODE_SMELL
+Zsquid:S1659Q"&Declare "lastName" on a separate line.(¡¤í 8Ü×Ýù›,HðRMINORZ
+CODE_SMELL
+_squid:S16594"&Declare "lastName" on a separate line.(å€á¯úÿÿÿÿ8ôÏ¤ù›,HÛRMINORZ
+CODE_SMELL
+`squid:S16594"'Declare "firstName" on a separate line.(å€á¯úÿÿÿÿ8ôÏ¤ù›,HÚRMINORZ
+CODE_SMELL
+m
+squid:S106“"9Replace this use of System.out or System.err by a logger.(•Æ¥ê8Ü×Ýù›,HñRMAJORZ
+CODE_SMELL

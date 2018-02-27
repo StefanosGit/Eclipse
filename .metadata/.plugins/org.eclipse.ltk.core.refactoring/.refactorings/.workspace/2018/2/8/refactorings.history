@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename Java project &apos;UpperCaseTest&apos; to &apos;AdvancedEclipseCourse&apos;&#x0D;&#x0A;- Original element: &apos;UpperCaseTest&apos;&#x0D;&#x0A;- Renamed element: &apos;UpperCaseTest&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename Java project &apos;UpperCaseTest&apos;" flags="7" id="org.eclipse.jdt.ui.rename.java.project" input="=UpperCaseTest" name="AdvancedEclipseCourse" references="true" stamp="1519138206916" version="1.0"/>
+</session>

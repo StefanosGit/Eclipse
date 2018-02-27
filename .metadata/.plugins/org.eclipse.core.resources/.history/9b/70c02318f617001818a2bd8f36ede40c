@@ -1,0 +1,27 @@
+package br.com.stef.eclipse.part2.section1;
+
+import java.util.Scanner;
+
+public class ScannerProc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+		
+		String line = "hello 40 2.5 true";
+		
+		Scanner scanner = new Scanner(line); 
+		
+		String word = scanner.next();
+		int num = scanner.nextInt();
+		double a = scanner.nextDouble();
+		boolean b = scanner.nextBoolean();
+		
+		System.out.println(word + "\n" + num + "\n" + a + "\n" + b);
+		
+		
+		
+
+	}
+
+}

@@ -1,0 +1,18 @@
+package br.com.stef.eclipse.part1;
+
+import javax.swing.JOptionPane;
+
+public class LengthProc {
+
+	public static void main(String[] args) {
+
+			String name = JOptionPane.showInputDialog("Enter your name");
+			
+			int num = name.length();
+			
+			System.out.println(num);
+			
+		
+	}
+
+}

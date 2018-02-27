@@ -1,0 +1,14 @@
+
+bsquid:S1135	"2Complete the task associated to this TODO comment.(» æžÿÿÿÿÿHjRINFOZ
+CODE_SMELL
+k
+squid:S106"9Replace this use of System.out or System.err by a logger.(Õ³³W8ÖÌÜô›,H•RMAJORZ
+CODE_SMELL
+l
+squid:S106""9Replace this use of System.out or System.err by a logger.(ò÷…˜8¸†üõ›,H˜RMAJORZ
+CODE_SMELL
+]squid:S1481/")Remove this unused "temp" local variable.(À½­â8Ìä–ö›,H¡RMINORZ
+CODE_SMELL
+l
+squid:S1064"9Replace this use of System.out or System.err by a logger.(ù™ŸÝ8Ìä–ö›,H RMAJORZ
+CODE_SMELL

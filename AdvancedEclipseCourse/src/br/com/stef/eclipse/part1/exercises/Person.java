@@ -1,0 +1,48 @@
+package br.com.stef.eclipse.part1.exercises;
+
+public class Person {
+	
+	
+	private String firstName;
+	private String middleName;
+	private String lastName;
+	private String abbreviation;
+	public String getFirstName() {
+		return firstName;
+	}
+	public void setFirstName(String firstName) {
+		this.firstName = firstName;
+	}
+	public String getMiddleName() {
+		return middleName;
+	}
+	public void setMiddleName(String middleName) {
+		this.middleName = middleName;
+		this.abbreviation = middleName.charAt(0) + ".";
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public String getAbbreviation() {
+		return abbreviation;
+	}
+	public void setAbbreviation(String abbreviation) {
+		this.abbreviation = abbreviation;
+	}
+	
+	
+	@Override
+	public String toString() {
+		
+		return "First: " + this.firstName + "\nMiddle: " + this.middleName 
+				+ "\nLast: " + this.lastName + "\n" + this.firstName + " " 
+				+ this.abbreviation + " " + this.lastName;
+		
+		
+	}
+	
+
+}

@@ -1,0 +1,14 @@
+
+[squid:S1659"'Declare "firstName" on a separate line.(¡¤í 8Ú†ûö›,H¹RMINORZ
+CODE_SMELL
+l
+squid:S106("9Replace this use of System.out or System.err by a logger.(èƒÖÔ8¼¸¥ø›,H»RMAJORZ
+CODE_SMELL
+Zsquid:S1659"&Declare "lastName" on a separate line.(¡¤í 8Ú†ûö›,H·RMINORZ
+CODE_SMELL
+q
+squid:S106'"9Replace this use of System.out or System.err by a logger.(©şêÜúÿÿÿÿ8Ô”¤ø›,HºRMAJORZ
+CODE_SMELL
+q
+squid:S106"9Replace this use of System.out or System.err by a logger.(°í’ıÿÿÿÿ8Ú†ûö›,H¸RMAJORZ
+CODE_SMELL

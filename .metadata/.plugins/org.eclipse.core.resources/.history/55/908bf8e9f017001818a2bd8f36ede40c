@@ -1,0 +1,24 @@
+package br.com.stef.eclipse.part1.exercises;
+
+import javax.swing.JOptionPane;
+
+public class Exercise2 {
+
+	private static String ESPACO = " ";
+	
+	
+	public static void main(String[] args) {
+		
+		Person person = new Person();
+		
+		String fullName = JOptionPane.showInputDialog("Enter Your Full Name");
+		person.setFirstName(fullName.substring(0, fullName.indexOf(ESPACO)));
+		person.setMiddleName(fullName.substring(fullName.indexOf(ESPACO),fullName.lastIndexOf(ESPACO)));
+		person.setLastName(fullName.substring(fullName.lastIndexOf(ESPACO)));
+		
+		
+		System.out.println(person);
+		
+	}
+
+}

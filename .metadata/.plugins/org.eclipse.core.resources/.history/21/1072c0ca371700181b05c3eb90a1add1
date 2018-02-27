@@ -1,0 +1,14 @@
+package br.com.stef.eclipse.exercicio1;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		String testeConvS = "15";
+		int testConvI = Integer.getInteger(testeConvS);
+		
+		System.out.println(testConvI);
+
+	}
+
+}

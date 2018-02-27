@@ -1,0 +1,153 @@
+package br.com.stef.eclipse.part2.exercises;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Locale;
+import java.util.Scanner;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class ExamResults {
+
+	private static final String SOURCE = "marks.txt";
+	private static final String RESULT = "results.txt";
+	private static final String TOKEN = "#";
+	private static final double MEDIA = 70.0;
+
+	public static void main(String[] args) {
+		
+		int option = 0;
+		
+		while(option!=3) {
+			
+			
+			try {
+				option = Integer.valueOf(JOptionPane.showInputDialog("1- Insert Data\n2- Process Data\n3- Exit"));
+				
+				if (option == 1) {
+					insertData();
+				} else if(option == 2) {
+					processData();
+				}
+				
+			}catch(Exception e) {
+				JOptionPane.showMessageDialog(new JFrame(), "No Option", "ERROR!",
+						JOptionPane.ERROR_MESSAGE);
+			}
+			
+		}
+
+	}
+
+
+
+	private static void insertData() {
+
+		int option = JOptionPane.YES_OPTION;
+
+		String line = "", firstName = "", lastName = "", grade = "";
+		try {
+
+			try (PrintWriter outFile = new PrintWriter(new FileWriter(SOURCE, true))) {
+					
+				while (option == JOptionPane.YES_OPTION) {
+
+					firstName = JOptionPane.showInputDialog("Enter student Name");
+					lastName = JOptionPane.showInputDialog("Enter student last Name");
+					grade = JOptionPane.showInputDialog("Enter student grade");
+					line = firstName + "#" + lastName + "#" + grade;
+					outFile.println(line);
+					option = JOptionPane.showConfirmDialog(null, "Would you like to input another data?", "Atention",
+							JOptionPane.YES_NO_OPTION);
+				}
+
+			}
+		} catch (IOException e) {
+			System.out.println("Erro de IO");
+		}
+
+	}
+
+	private static void processData() {
+
+		try {
+
+			try (Scanner fileScanner = new Scanner(new File(SOURCE))) {
+
+				String line = "", firstName = "", lastName = "";
+				double grade;
+				
+				int count = 0;
+				
+				while (fileScanner.hasNext()) {
+					
+					count++;
+					
+					line = fileScanner.nextLine();
+
+					try (Scanner scanner = new Scanner(line).useDelimiter("#")) {
+						scanner.useLocale(Locale.US);
+						firstName = scanner.next();
+						lastName = scanner.next();
+						grade = scanner.nextDouble();
+
+						insertProcessedData(firstName, lastName, grade);
+
+					}
+
+				}
+				
+				if(count>0) {
+					JOptionPane.showMessageDialog(new JFrame(), "It was processed " + count + " data", "ATENTION!",
+					JOptionPane.INFORMATION_MESSAGE);
+				}
+				else {
+						JOptionPane.showMessageDialog(new JFrame(), "There is no Data to Process", "ATENTION!",
+					JOptionPane.ERROR_MESSAGE);
+				}
+				
+
+			}
+		} catch (FileNotFoundException e) {
+			JOptionPane.showMessageDialog(new JFrame(), "There is no Data to Process", "ATENTION!",
+					JOptionPane.ERROR_MESSAGE);
+		}
+		finally {
+			try (PrintWriter outFile = new PrintWriter(new FileWriter(SOURCE))) {
+				outFile.print("");
+			} catch (IOException e) {
+				e.printStackTrace();
+			}
+		}
+
+	}
+
+	private static void insertProcessedData(String firstName, String lastName, double grade) {
+
+		String line = firstName.charAt(0) + ". " + lastName + " " + String.valueOf(grade) + "% ";
+		
+		if(grade>=MEDIA) {
+			line+="true";
+		}
+		else {
+			line+="false";
+		}
+		
+		
+		try {
+			
+			try (PrintWriter outFile = new PrintWriter(new FileWriter(RESULT, true))) {
+				outFile.println(line);
+			}
+		}catch(IOException e) {
+			System.out.println("Erro de IO 2");
+		}
+
+		
+	}
+
+}

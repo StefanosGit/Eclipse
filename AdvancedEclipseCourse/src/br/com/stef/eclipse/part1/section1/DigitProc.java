@@ -1,0 +1,22 @@
+package br.com.stef.eclipse.part1.section1;
+
+import javax.swing.JOptionPane;
+
+public class DigitProc {
+	
+	
+	public static void main(String[] args) {
+		
+		char ch = JOptionPane.showInputDialog("Enter a number").charAt(0);
+
+		boolean b = Character.isDigit(ch);
+
+		if (b) {
+			System.out.println("It is a Number");
+		} else {
+			System.out.println("It is not a Number");
+		}
+	}
+
+
+}

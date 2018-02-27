@@ -1,0 +1,107 @@
+package br.com.stef.eclipse.part2.exercises;
+
+import java.io.File;
+import java.io.FileNotFoundException;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.util.Scanner;
+
+import javax.swing.JOptionPane;
+
+public class ExamResults {
+
+	private static final String SOURCE = "marks.txt";
+	private static final String RESULT = "results.txt";
+	private static final String TOKEN = "#";
+	private static final double MEDIA = 70.0;
+	
+	
+	public static void main(String[] args) {
+
+		int option = showPrincipal();
+
+		if (option == 1) {
+			insertData();
+		} else {
+			System.out.println("Vou processar Dados");
+		}
+
+	}
+
+	private static int showPrincipal() {
+
+		return Integer.valueOf(JOptionPane.showInputDialog("1- Inserir Dados\n2- Processar Dados"));
+
+	}
+
+	private static void insertData() {
+
+		int option = JOptionPane.YES_OPTION;
+
+		String line = "", firstName = "", lastName = "", grade = "";
+		try {
+			
+			try (PrintWriter outFile = new PrintWriter(new FileWriter(SOURCE, true))) {
+				
+				while (option == JOptionPane.YES_OPTION) {
+					
+					firstName = JOptionPane.showInputDialog("Enter student Name");
+					lastName = JOptionPane.showInputDialog("Enter student last Name");
+					grade = JOptionPane.showInputDialog("Enter student grade");
+					line = firstName + "#" + lastName + "#" + grade;
+					outFile.println(line);
+					option = JOptionPane.showConfirmDialog(
+				            null,
+				            "Would you like to input another data?",
+				            "Atention",
+				            JOptionPane.YES_NO_OPTION);
+				}
+				
+			}
+		}catch (IOException e) {
+			System.out.println("Erro de IO");
+		}
+
+	}
+	
+	private static void processData() {
+		
+		try {
+			
+			try(Scanner fileScanner = new Scanner(new File(SOURCE))){
+				
+				String line="", firstName="",lastName="";
+				double grade;
+				
+				while(fileScanner.hasNext()) {
+					
+					line = fileScanner.nextLine();
+					
+					try(Scanner scanner = new Scanner(line).useDelimiter("#")){
+						
+						firstName = scanner.next();
+						lastName = scanner.next();
+						age = scanner.nextInt();
+						
+						System.out.println(firstName.charAt(0) + ". " + lastName + " " + age);
+						
+					}
+					
+				}
+				
+			}
+		}catch(FileNotFoundException e) {
+			File f = new File(SOURCE);
+			try {
+				f.createNewFile();
+			} catch (IOException e1) {
+				e1.printStackTrace();
+			}
+		}
+
+	}
+	
+	
+
+}

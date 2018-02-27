@@ -1,0 +1,35 @@
+package br.com.stef.eclipse.exercicio1;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+
+public class Exercicio1 {
+	
+	
+	
+	public static void main(String[] args) {
+		
+		Personal personal1 = new Personal();
+		
+		personal1.setName(JOptionPane.showInputDialog("Enter your name"));
+		personal1.setLastName(JOptionPane.showInputDialog("Enter your last name"));
+		System.out.println(personal1);
+		personal1.setAge(Integer.getInteger(JOptionPane.showInputDialog("Enter your age")));
+		
+		System.out.println(personal1);
+		
+		
+/*		while (personal1.getAge()<=18) {
+			
+			JOptionPane.showMessageDialog(new JFrame(),"The age must be above 18");
+			//personal1.setAge(Integer.getInteger(JOptionPane.showInputDialog("Enter your age")));
+			
+		}*/
+		
+		
+		
+		
+	}
+
+}

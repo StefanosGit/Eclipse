@@ -1,0 +1,13 @@
+package br.com.stef.eclipse.part1.section2;
+
+public class SubStringProc {
+	
+	
+	public static void main(String[] args) {
+		
+		String sent = "Strings are lines of text";
+		System.out.println(sent.substring(0));
+		System.out.println(sent.substring(5,10));
+	}
+
+}

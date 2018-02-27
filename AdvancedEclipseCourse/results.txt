@@ -1,0 +1,5 @@
+S. Pavlidis 50.0 % false
+B. Coutinho 75.6 % true
+F. Pavlidis 99.1 % true
+A. Sa 15.0 % false
+L. Pereira 10.0 % false

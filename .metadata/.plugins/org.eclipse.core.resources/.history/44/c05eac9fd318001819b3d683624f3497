@@ -1,0 +1,10 @@
+package br.com.stef.eclipse.optional;
+
+public class TestaPet {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

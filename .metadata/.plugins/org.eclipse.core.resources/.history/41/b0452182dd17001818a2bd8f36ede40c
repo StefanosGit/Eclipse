@@ -1,0 +1,14 @@
+package br.com.stef.eclipse.part1.exercicio1;
+
+public class Teste {
+
+	public static void main(String[] args) {
+		
+		String testeConvS = "03ab";
+		Integer testConvI = Integer.parseInt(testeConvS);
+		
+		System.out.println(testConvI);
+
+	}
+
+}

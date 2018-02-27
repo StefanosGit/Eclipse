@@ -1,0 +1,53 @@
+package br.com.stef.eclipse.exercicio1;
+
+public class Personal {
+	
+	private String name;
+	private String lastName;
+	private int age;
+	private String abbreviation;
+	
+	
+	public String getName() {
+		return name;
+	}
+	
+	
+	
+	public void setName(String name) {
+		this.name = name;
+	}
+	public String getLastName() {
+		return lastName;
+	}
+	public void setLastName(String lastName) {
+		this.lastName = lastName;
+	}
+	public int getAge() {
+		return age;
+	}
+	public void setAge(int age) {
+		this.age = age;
+	}
+	
+	
+	public String getAbbreviation() {
+		return abbreviation;
+	}
+
+
+
+	public void setAbbreviation(String abbreviation) {
+		this.abbreviation = abbreviation;
+	}
+
+
+
+	@Override
+	public String toString() {
+		// TODO Auto-generated method stub
+		return "Personal [name: " + this.name + " lastName: " + this.lastName +
+				" Abbreviation: " + this.abbreviation + " Age: "+ this.age + "]";
+	}
+
+}

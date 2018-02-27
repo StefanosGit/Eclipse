@@ -1,0 +1,10 @@
+package br.com.stef.eclipse.part1;
+
+public class LengthProc {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

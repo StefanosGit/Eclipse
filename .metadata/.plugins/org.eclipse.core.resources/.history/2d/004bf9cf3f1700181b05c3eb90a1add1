@@ -1,0 +1,56 @@
+package br.com.stef.eclipse.exercicio1;
+
+import javax.swing.JFrame;
+import javax.swing.JOptionPane;
+
+public class Exercicio1 {
+
+	public static void main(String[] args) {
+
+		Personal personal1 = setPersonal();
+		Personal personal2 = setPersonal();
+
+		if (personal1.getLastName().compareTo(personal2.getLastName()) < 0) {
+			System.out.println(personal1);
+			System.out.println(personal2);
+		} else {
+			System.out.println(personal2);
+			System.out.println(personal1);
+		}
+
+	}
+
+	private static Personal setPersonal() {
+
+		Personal personal = new Personal();
+
+		personal.setName(JOptionPane.showInputDialog("Enter your name").toUpperCase());
+		personal.setLastName(JOptionPane.showInputDialog("Enter your last name").toUpperCase());
+		personal.setAge(ageValidation());
+
+		return personal;
+
+	}
+
+	private static int ageValidation() {
+
+		int personalAge = 0;
+
+		while (personalAge <= 18) {
+			int i=0;
+			if(i>0) {
+							JOptionPane.showMessageDialog(new JFrame(), "The age must be above 18", "ATENTION!",
+					JOptionPane.ERROR_MESSAGE);
+			}
+			try {
+				personalAge = Integer.valueOf(JOptionPane.showInputDialog("Enter your age"));
+			} catch (Exception e) {
+				personalAge = 0;
+			}
+			i++;
+		}
+		
+	return personalAge;
+
+	}
+}

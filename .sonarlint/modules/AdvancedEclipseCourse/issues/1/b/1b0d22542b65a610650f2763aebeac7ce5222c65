@@ -1,0 +1,8 @@
+
+ysquid:S3027"FPut single-quotes around ' ' to use the faster "indexOf(char)" method.(—©Û¸8›ø¯ó›,HgRMAJORZ
+CODE_SMELL
+‚squid:S3027	"JPut single-quotes around ' ' to use the faster "lastIndexOf(char)" method.(ŸÁ¨”úÿÿÿÿ8›ø¯ó›,HhRMAJORZ
+CODE_SMELL
+d
+squid:S106"9Replace this use of System.out or System.err by a logger.(½……žHfRMAJORZ
+CODE_SMELL

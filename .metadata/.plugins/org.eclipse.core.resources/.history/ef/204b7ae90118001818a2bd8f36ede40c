@@ -1,0 +1,12 @@
+package br.com.stef.eclipse.part2.section1;
+
+public class ScannerFileProc {
+
+	public static void main(String[] args) {
+		
+		String fileName = "names.txt";
+		
+
+	}
+
+}
